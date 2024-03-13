@@ -3,27 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 29, 29, 31;
+  --background-start-rgb: 245, 245, 247;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 245, 245, 247;
+    --background-start-rgb: 14, 9, 22;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
@@ -31,3 +24,17 @@ body {
     text-wrap: balance;
   }
 }
+
+body::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: --background-start-rgb; /* Cor de fundo da barra de rolagem */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #7C3AED; /* Cor do polegar */
+  border-radius: 6px; /* Borda arredondada do polegar */
+}
+
