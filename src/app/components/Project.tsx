@@ -53,7 +53,7 @@ export default function Project(props: any) {
           </div>
           <img src={props.img} alt="" className="w-full rounded-md" />
           <div className="m-6">
-            <p>{props.desc}</p>
+            <p className="-m-4">{props.desc}</p>
           </div>
           <div>
             <Button

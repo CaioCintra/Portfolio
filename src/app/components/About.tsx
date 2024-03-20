@@ -21,7 +21,7 @@ export default function About() {
 
   return (
     <div className="mt-32 flex items-center flex-wrap justify-center">
-      <div className="px-5 w-[45%]">
+      <div className="pr-5 w-[45%]">
         <p className="font-bold" style={{fontSize: textSize}}>Olá, eu sou o</p>
         <p className="font-bold text-violet-600" style={{fontSize: textSize}}>Caio Cintra</p>
         <p className="text-lg font-bold text-gray-500">
