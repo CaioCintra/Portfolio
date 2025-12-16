@@ -10,14 +10,21 @@ export default function Projects() {
           img="/SistemaTCC.png"
           link="https://github.com/CaioCintra/Sistema_TCC"
           nome="Sistema Gerenciador de TCC"
-          desc="Sistema para simplificar o trabalho do professor responsável pelas atividades de trabalho de conclusão de curso da UTFPR."
+          desc="Sistema para simplificar o trabalho do professor responsável pelas atividades de trabalho de conclusão de curso da UTFPR. Feito com Next.js no front-end e Node.js no back-end."
         />
         <Project
           img="/Pokedex.png"
           link="https://github.com/CaioCintra/Pokedex"
           site="https://pokedex-caiocintra.vercel.app"
           nome="Pokédex"
-          desc="Pokédex interativa, feita para treinar em Next.js"
+          desc="Pokédex interativa, feita em Next.js. Permite buscar por pokémon, visualizar detalhes e navegar entre eles."
+        />
+        <Project
+          img="/Scrng.png"
+          link="https://github.com/CaioCintra/CapsulaDoTempo"
+          site="https://scrng.vercel.app"
+          nome="Scrng"
+          desc="Gerenciador de pontuação para jogos ou brincadeiras, feito com Next.js. Com ele é possível criar salas e adicionar jogadores para acompanhar a pontuação de cada um."
         />
         <Project
           img="/Capsula.png"
