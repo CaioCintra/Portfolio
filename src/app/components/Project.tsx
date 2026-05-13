@@ -17,47 +17,33 @@ export default function Project(props: any) {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: "90%",
+    width: "calc(100% - 2rem)",
     maxWidth: "900px",
-    maxHeight: "90vh",
+    maxHeight: "calc(100vh - 2rem)",
     bgcolor: "#0E0916",
-    boxShadow: 24,
-    p: 3,
-    borderRadius: "12px",
+    boxShadow: "0 25px 50px rgba(0, 0, 0, 0.5)",
+    p: { xs: 2, sm: 3, md: 4 },
+    borderRadius: "16px",
+    border: "1px solid rgba(124, 58, 237, 0.2)",
   };
 
   return (
     <>
       <div
-        className="
-    m-5
-    w-[90vw]
-    h-[220px]
-    sm:h-[280px]
-    md:h-[350px]
-    lg:w-[800px]
-    lg:h-[450px]
-    hover:lg:w-[840px]
-    ease-in-out
-    duration-500
-    relative
-    cursor-pointer
-    overflow-hidden
-    rounded-md
-  "
+        className="m-2 sm:m-3 md:m-5 w-[90vw] sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[800px] h-[180px] sm:h-[250px] md:h-[320px] lg:h-[450px] hover:shadow-xl hover:shadow-violet-600/20 ease-in-out duration-500 relative cursor-pointer overflow-hidden rounded-lg shadow-lg"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <img
           src={props.img}
-          alt=""
-          className="w-full h-full object-cover rounded-md"
-          style={{ filter: isHovered ? "brightness(30%)" : "brightness(100%)" }}
+          alt={props.nome}
+          className="w-full h-full object-cover rounded-lg"
+          style={{ filter: isHovered ? "brightness(35%) saturate(0)" : "brightness(100%)", objectPosition: "top" }}
         />
 
         {isHovered && (
           <span
-            className="text-xl absolute inset-0 flex justify-center items-center text-white bg-black bg-transparent"
+            className="text-base sm:text-lg md:text-2xl font-bold absolute inset-0 flex justify-center items-center text-white cursor-pointer"
             onClick={handleOpen}
           >
             {props.nome}
@@ -66,27 +52,27 @@ export default function Project(props: any) {
       </div>
       <Modal open={open} onClose={handleClose}>
         <Box sx={{ ...modalStyle, outline: "none" }}>
-          <div className="w-full max-h-[90vh] overflow-y-auto flex flex-col items-center">
-            <div className="text-center my-4">
-              <p className="text-2xl font-bold">{props.nome}</p>
+          <div className="w-full max-h-[calc(100vh-2rem)] overflow-y-auto flex flex-col items-center">
+            <div className="text-center my-3 sm:my-4 md:my-6 w-full">
+              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-violet-600">{props.nome}</p>
             </div>
 
             <img
               src={props.img}
-              alt=""
-              className="w-full max-h-[300px] object-cover rounded-md"
+              alt={props.nome}
+              className="max-w-[90%] max-h-[250px] sm:max-h-[350px] md:max-h-[400px] object-contain rounded-lg shadow-lg"
             />
 
-            <div className="my-6 px-4 text-center">
-              <p>{props.desc}</p>
+            <div className="my-4 sm:my-6 px-3 sm:px-4 md:px-6 text-center w-full">
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">{props.desc}</p>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4 mb-4">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-3 sm:mb-4 w-full px-3 sm:px-4">
               <Button
                 href={props.link}
                 target="_blank"
                 variant="contained"
-                className="bg-violet-900 hover:bg-violet-700 w-36"
+                className="bg-gradient-to-r from-violet-600 to-violet-700 hover:from-violet-700 hover:to-violet-800 w-28 sm:w-32 md:w-36 text-xs sm:text-sm md:text-base"
               >
                 Repositório
               </Button>
@@ -96,7 +82,7 @@ export default function Project(props: any) {
                   href={props.site}
                   target="_blank"
                   variant="contained"
-                  className="bg-violet-900 hover:bg-violet-700 w-36"
+                  className="bg-gradient-to-r from-violet-600 to-violet-700 hover:from-violet-700 hover:to-violet-800 w-28 sm:w-32 md:w-36 text-xs sm:text-sm md:text-base"
                 >
                   Site
                 </Button>

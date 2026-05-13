@@ -3,9 +3,9 @@ import Project from "./Project";
 export default function Projects() {
   return (
     <>
-      <p className="text-3xl font-bold text-center m-11">Projetos</p>
+      <p className="text-2xl sm:text-3xl font-bold text-center m-6 sm:m-11">Projetos</p>
 
-      <div className="overflow-y-auto align-middle flex items-center flex-wrap justify-center">
+      <div className="overflow-y-auto align-middle flex items-center flex-wrap justify-center px-2 sm:px-4 pb-10">
         <Project
           img="/SistemaTCC.png"
           link="https://github.com/CaioCintra/Sistema_TCC"
@@ -25,6 +25,13 @@ export default function Projects() {
           site="https://scrng.vercel.app"
           nome="Scrng"
           desc="Gerenciador de pontuação para jogos ou brincadeiras, feito com Next.js. Com ele é possível criar salas e adicionar jogadores para acompanhar a pontuação de cada um."
+        />
+        <Project
+          img="/Chamados.png"
+          link="https://github.com/CaioCintra/Lista-De-Chamados"
+          site="https://lista-de-chamados.vercel.app"
+          nome="Lista de Chamados"
+          desc="Sistema para gerenciar chamados, feito com Next.js. Permite criar e visualizar chamados. Populado com um gerador de dados para facilitar os testes e demonstração do projeto. Inclui uma aba de gráficos para verificar um resumo dos dados dos chamados e testes em Jest para garantir a qualidade do código."
         />
         <Project
           img="/Capsula.png"
