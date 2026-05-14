@@ -30,8 +30,8 @@ export default function Project(props: any) {
   return (
     <>
       <div
-        className="m-5 w-[90vw]
-    h-[220px]
+        className="m-5 w-[45vw]
+    h-[450px]
     sm:h-[280px]
     md:h-[350px]
     lg:w-[800px]
