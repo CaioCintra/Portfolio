@@ -30,7 +30,21 @@ export default function Project(props: any) {
   return (
     <>
       <div
-        className="m-2 sm:m-3 md:m-4 w-[90vw] sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[350px] xl:w-[400px] h-[200px] sm:h-[280px] md:h-[320px] lg:h-[400px] xl:h-[450px] hover:shadow-xl hover:shadow-violet-600/20 ease-in-out duration-500 relative cursor-pointer overflow-hidden rounded-lg shadow-lg"
+        className="m-5 w-[90vw]
+    h-[220px]
+    sm:h-[280px]
+    md:h-[350px]
+    lg:w-[800px]
+    lg:h-[450px]
+    hover:lg:w-[840px]
+    ease-in-out
+    duration-500
+    relative
+    cursor-pointer
+    overflow-hidden
+    rounded-md
+    hover:shadow-violet-600/20
+  "
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -38,7 +52,12 @@ export default function Project(props: any) {
           src={props.img}
           alt={props.nome}
           className="w-full h-full object-cover rounded-lg"
-          style={{ filter: isHovered ? "brightness(35%) saturate(0)" : "brightness(100%)", objectPosition: "top" }}
+          style={{
+            filter: isHovered
+              ? "brightness(35%) saturate(0)"
+              : "brightness(100%)",
+            objectPosition: "top",
+          }}
         />
 
         {isHovered && (
@@ -54,7 +73,9 @@ export default function Project(props: any) {
         <Box sx={{ ...modalStyle, outline: "none" }}>
           <div className="w-full max-h-[calc(100vh-2rem)] overflow-y-auto flex flex-col items-center">
             <div className="text-center my-3 sm:my-4 md:my-6 w-full">
-              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-violet-600">{props.nome}</p>
+              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-violet-600">
+                {props.nome}
+              </p>
             </div>
 
             <img
@@ -64,7 +85,9 @@ export default function Project(props: any) {
             />
 
             <div className="my-4 sm:my-6 px-3 sm:px-4 md:px-6 text-center w-full">
-              <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">{props.desc}</p>
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
+                {props.desc}
+              </p>
             </div>
 
             <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-3 sm:mb-4 w-full px-3 sm:px-4">
