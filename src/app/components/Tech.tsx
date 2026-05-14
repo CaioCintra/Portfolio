@@ -19,7 +19,7 @@ export default function Tech() {
     <>
       <p className="text-2xl sm:text-3xl font-bold text-center m-6 sm:m-11">Principais tecnologias</p>
       <div className="flex items-center justify-center mb-20 px-4">
-        <div className="w-full max-w-7xl grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10 gap-2 sm:gap-3 place-items-center">
+        <div className="w-full max-w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-10 gap-2 sm:gap-3 md:gap-4 place-items-center px-2">
           <Tooltip title="HTML5">
             <div className="rounded-full bg-gradient-to-br from-violet-600 to-violet-700 h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 hover:from-violet-700 hover:to-violet-900 transition duration-300 flex items-center justify-center p-2 sm:p-3 shadow-lg hover:shadow-violet-600/50">
               <FontAwesomeIcon className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20" icon={faHtml5} />

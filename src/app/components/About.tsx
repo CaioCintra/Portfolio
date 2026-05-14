@@ -2,20 +2,22 @@
 
 export default function About() {
   return (
-    <div className="mt-32 flex items-center flex-wrap justify-center px-4 sm:px-6 md:px-8">
-      <div className="w-full sm:w-1/2 lg:w-5/12 text-center sm:text-left sm:pr-8 mb-8 sm:mb-0">
-        <p className="font-bold leading-tight text-[7vw] sm:text-[5vw] md:text-[4vw] lg:text-[5vw]">Olá, eu sou o</p>
-        <p className="font-bold text-violet-600 leading-tight text-[7vw] sm:text-[5vw] md:text-[4vw] lg:text-[5vw]">Caio Cintra</p>
-        <p className="text-sm sm:text-base md:text-lg font-bold text-gray-400 mt-2">
-          DESENVOLVEDOR FRONTEND
-        </p>
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-3/12 flex justify-center mb-8 sm:mb-0">
-        <img src="/Foto.png" className='w-40 sm:w-56 md:w-72 h-auto rounded-lg shadow-lg'/>
+    <div className="mt-32">
+      <div className="flex items-center justify-center px-4 sm:px-6 md:px-8 flex-wrap sm:flex-nowrap gap-6 md:gap-8">
+        <div className="w-full sm:w-1/2 text-center sm:text-left">
+          <p className="font-bold leading-tight text-[7vw] sm:text-[5vw] md:text-[4vw] lg:text-[5vw]">Olá, eu sou o</p>
+          <p className="font-bold text-violet-600 leading-tight text-[7vw] sm:text-[5vw] md:text-[4vw] lg:text-[5vw]">Caio Cintra</p>
+          <p className="text-sm sm:text-base md:text-lg font-bold text-gray-400 mt-2">
+            DESENVOLVEDOR FRONTEND
+          </p>
+        </div>
+        <div className="w-full sm:w-1/2 flex justify-center">
+          <img src="/Foto.png" className='w-40 sm:w-48 md:w-64 h-auto rounded-lg shadow-lg'/>
+        </div>
       </div>
       <div className="w-full p-6 sm:p-8 md:p-10 mb-20">
         <p className="text-2xl sm:text-3xl font-bold text-center mb-6">Sobre mim</p>
-        <p className="px-4 sm:px-8 text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed text-justify">
+        <p className="px-4 sm:px-8 text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed text-justify max-w-4xl mx-auto">
           Desenvolvedor frontend, com experiência em React.js, Next.js, Angular, Tailwind
           CSS, Bootstrap, JavaScript e TypeScript, bem como em bibliotecas como
           Material UI, estou comprometido em transformar conceitos em

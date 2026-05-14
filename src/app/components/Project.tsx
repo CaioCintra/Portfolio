@@ -30,7 +30,7 @@ export default function Project(props: any) {
   return (
     <>
       <div
-        className="m-2 sm:m-3 md:m-5 w-[90vw] sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[800px] h-[180px] sm:h-[250px] md:h-[320px] lg:h-[450px] hover:shadow-xl hover:shadow-violet-600/20 ease-in-out duration-500 relative cursor-pointer overflow-hidden rounded-lg shadow-lg"
+        className="m-2 sm:m-3 md:m-4 w-[90vw] sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[350px] xl:w-[400px] h-[200px] sm:h-[280px] md:h-[320px] lg:h-[400px] xl:h-[450px] hover:shadow-xl hover:shadow-violet-600/20 ease-in-out duration-500 relative cursor-pointer overflow-hidden rounded-lg shadow-lg"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
